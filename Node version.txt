@@ -1,0 +1,7 @@
+nodejs@0.8.2
+express@3.0.4
+ejs@0.8.3
+MongoDB@1.2.6
+connect-mongodb@0.2.0
+express-partials@0.0.6
+connect-flash@0.1.0

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps JavaScript API v3 Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <style type="text/css">
+    	html, body {
+				margin: 0px;
+				padding-top: 10px;
+				height: 100%;
+			}
+      #map_canvas {
+        margin: 0px;
+        padding: 0px;
+        height: 85%;
+      }
+    </style>
+		<!-- Le styles -->
+		<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+		<link href="/stylesheets/bootstrap-responsive.css" rel="stylesheet">
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="javascripts/html5.js"></script>
+		<![endif]-->
+    <script src="/javascripts/googlemapsapi.js"></script>
+		<script src="/javascripts/mapini.js"></script>
+  </head>
+  
+  <body onload="initialize()"><!--google.maps.event.addDomListener(window, 'load', initialize);-->
+  	<%- partial('navbar',{navbar:navbar,user:user})%>
+    <div id="map_canvas"></div>
+    <div class="container">
+    <hr /><!--ÏÂ½ÅºáÏß-->
+		<footer>
+			<p>&copy; Company 2011-2013</p>
+		</footer>
+		</div>
+  </body>
+
+  <script src="/javascripts/jquery.js"></script>
+	<script src="/javascripts/bootstrap.js"></script>
+</html>

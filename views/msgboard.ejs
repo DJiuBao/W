@@ -1,0 +1,15 @@
+﻿<% if (navbar=='msgboard'){ %>
+	<div class="page-header">
+		<h1>Message Board<h2><small>这里是一个沟通的平台，欢迎各位写下您的宝贵建议，以便我们不断完善网站的功能。</small></h2></h1>
+	</div>
+	<% if (user){ %>
+		<%- partial('say') %>
+	<% } %>
+<% } else { %>
+	<% if (user){ %>
+		<%- partial('say') %>
+	<% } %>
+<% } %>
+<div>
+	<%- partial('posts', {posts:posts}) %>
+</div>

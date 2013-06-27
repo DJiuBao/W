@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html><!--lang="en"-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+		<title><%= title %></title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<!-- Le styles -->
+		<link href="stylesheets/bootstrap.css" rel="stylesheet">
+		<link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="javascripts/html5.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			body {
+				padding-top: 60px;
+				padding-bottom: 40px;
+			}
+		/* CUSTOMIZE THE NAVBAR
+		-------------------------------------------------- */
+
+		/* Carousel base class */
+		.carousel {
+			margin-bottom: 60px;
+		}
+
+		.carousel .container {
+			position: relative;
+			z-index: 9;
+		}
+
+		.carousel-control {
+			height: 80px;
+			margin-top: 0;
+			font-size: 160px;
+			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+			background-color: transparent;
+			border: 0;
+		}
+
+		.carousel .item {
+			height: 550px;
+		}
+		.carousel img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			min-width: 100%;
+			height: 500px;
+		}
+
+		.carousel-caption {
+			background-color: transparent;
+			position: static;
+			max-width: 550px;
+			padding: 0 20px;
+			margin-top: 200px;
+		}
+		.carousel-caption h1,
+		.carousel-caption .lead {
+			margin: 0;
+			line-height: 1.25;
+			color: #fff;
+			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+		}
+		.carousel-caption .btn {
+			margin-top: 10px;
+		}
+		</style>
+	</head>	
+	
+	<body>
+		<div class="navbar navbar-inverse <!--navbar-inverse--> navbar-fixed-top"><!--Navbar导航条-->
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="#">Weiming Traveller/Ehealth</a><!--Brand商标-->
+					<div class="nav-collapse collapse"><!--nav-collapse响应式操作-->
+						<ul class="nav"><!--Nav导航-->
+							<% if (navbar=='home'){%>
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="about">About</a></li>
+								<li><a href="contact">Contact</a></li>
+							<% } else if (navbar=='about'){%>
+								<li><a href="home">Home</a></li>
+								<li class="active"><a href="#">About</a></li>
+								<li><a href="contact">Contact</a></li>
+							<% } else if (navbar=='contact'){%>
+								<li><a href="home">Home</a></li>
+								<li><a href="about">About</a></li>
+								<li class="active"><a href="#">Contact</a></li>
+							<% } else {%>
+								<li><a href="home">Home</a></li>
+								<li><a href="about">About</a></li>
+								<li><a href="contact">Contact</a></li>
+							<% } %>
+							<% if (user) {%>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+									<ul class="dropdown-menu"><!--下拉菜单-->
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li class="divider"></li>
+										<li class="nav-header">Nav header</li>
+										<li><a href="#">Separated link</a></li>
+										<li><a href="#">One more separated link</a></li>
+									</ul><!-- /下拉菜单-->
+								</li>
+							<% } %>
+						</ul><!-- /Nav导航-->
+						<% if (!user){ %>
+							<% if (navbar=='home'){%>
+								<form class="navbar-form pull-right" method="post">
+									<input class="span2" type="text" name="username" placeholder="Email">
+									<input class="span2" type="password" maxlength="20" name="password" placeholder="Password">
+									<button type="submit" class="btn btn-primary" href="">Sign in</button>
+								</form>
+							<% } %>
+						<% } else { %>
+							<form class="navbar-search" action="">
+								<input type="text" class="search-query span2" placeholder="Search">
+							</form>
+							<ul class="nav pull-right">
+							  <li><a href="#">您好！<%= user.name %></a></li>
+								<li><a href="logout">登出</a></li>
+							</ul>
+						<% } %>
+					</div><!-- /.nav-collapse响应式操作-->
+				</div><!-- /container-->
+			</div><!-- /navbar-inner-->
+		</div><!-- /navbar导航条-->
+
+		<div class="container">
+
+			<% if (success) { %>
+				<div class="alert alert-success">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<strong><%= success %></strong>
+				</div>
+			<% } %>
+			<% if (error) { %>
+				<div class="alert alert-error">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<strong>Warning! : <%= error %></strong>
+				</div>
+			<% } %>
+
+			<%- body %>
+				
+			<hr /><!--下脚横线-->
+			<footer>
+				<p>&copy; Company 2012</p>
+			</footer>
+
+		</div> <!-- /container -->
+	</body>
+
+	<script src="javascripts/jquery.js"></script>
+	<script src="javascripts/bootstrap.js"></script>
+</html>

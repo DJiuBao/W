@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>GeoSIS实验室荣誉出品</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+  <style type="text/css">
+      html, body, #map_canvas {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+    <script type="text/javascript">
+      var map;
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(39.9918396351859,116.30642834119499);//故宫(39.918163,116.397014);
+        var myOptions = {
+          zoom: 11,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };      
+        map = new google.maps.Map(document.getElementById('map_canvas'),myOptions);
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Beijing'
+        });      
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map_canvas"></div>
+  </body>
+</html>
