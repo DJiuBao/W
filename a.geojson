@@ -22,7 +22,7 @@
            ]
        },
        "properties": {"prop0": "value0", "prop1": {"this": "that"}}
-    }
+    },
    { "type": "Feature",
        "geometry": {
          "type": "Point", "coordinates": [100.0, 0.0] },"properties": {"prop0": "value0", "prop1": 0.0}
@@ -47,5 +47,3 @@
 
   ]
 }
-
-  
