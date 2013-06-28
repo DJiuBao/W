@@ -153,6 +153,17 @@ exports.ofc = function(req, res){
 	});
 };
 
+exports.leaflet = function(req, res){
+	res.render('leaflet', {
+		title: 'Leaflet',
+		user: req.session.user,
+		success: res.locals.success,
+		error: res.locals.error,
+		navbar: '',
+		layout: 'wtraveller'
+	});
+};
+
 exports.post = function(req, res){
 	var currentUser = req.session.user;
 	var post = new Post(currentUser.name,req.body.post);

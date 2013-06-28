@@ -16,6 +16,7 @@ module.exports = function(app,handler,user){
 	app.get('/probar', handler.proBar);
 	app.get('/GPS',handler.gpsupload);
 	app.get('/ofc',handler.ofc);
+	app.get('/leaflet',handler.leaflet);
 	//---------------------------------------
 	app.get('/digihealth',handler.digihealth);
 	//---------------------------------------
