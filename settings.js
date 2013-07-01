@@ -2,5 +2,5 @@
 module.exports = {
 	cookieSecret: 'WTravellerbyDaBao',
 	db: 'WTraveller',
-	host: 'localhost',
+	host: process.env.VCAP_APP_HOST || 'localhost',
 };

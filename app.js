@@ -17,7 +17,7 @@ var settings = require('./settings');
 var app = express();
 
 app.configure(function(){
-		app.set('port', process.env.PORT || 8888);
+		app.set('port', process.env.VMC_APP_PORT || 8888);
 		app.set('views', __dirname + '/views');
 		app.set('view engine', 'ejs');
 		app.use(partials());
