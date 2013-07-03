@@ -1,16 +1,29 @@
 {
-  "name": "application-name",
+  "name": "djiubao",
   "version": "0.0.1",
+  "description": "Site for my interestings.",
+  "author": {
+    "name": "DJiuBao",
+    "email": "jack_ling3312@sina.com",
+  },
   "private": true,
   "scripts": {
     "start": "node app"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DJiuBao/djiubao.git"
+  },
+  "engines": {
+    "node": "0.8.2"
+  },
   "dependencies": {
     "express": "3.0.4",
-    "ejs": ">= 0.0.1",
-    "mongodb": ">= 0.9.9",
-    "connect-mongo": ">= 0.1.7",
-    "connect-flash": ">= 0.1.0",
-    "express-partials": ">= 0.0.6"
+    "ejs": "0.8.3",
+    "mongodb": "1.2.6",
+    "mysql":"0.9.6",
+    "connect-mongo": "0.2.0",
+    "connect-flash": "0.1.0",
+    "express-partials": "0.0.6"
   }
 }
