@@ -17,6 +17,8 @@ module.exports = function(app,handler,user){
 	app.get('/GPS',handler.gpsupload);
 	app.get('/ofc',handler.ofc);
 	app.get('/leaflet',handler.leaflet);
+	app.get('/xml2js',handler.xml2js);
+
 	//---------------------------------------
 	app.get('/digihealth',handler.digihealth);
 	//---------------------------------------

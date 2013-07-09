@@ -1,0 +1,23 @@
+<Message MsgCategory="DSC020001">
+    <Info>
+        <Datatime>19871010000000</Datatime>
+        <Devid>2</Devid>
+        <Person>1</Person>
+    </Info>
+    <Position>
+        <Longitute>109.88</Longitute>
+        <Latitute>33.569</Latitute>
+        <Altitude>1000</Altitude>
+        <Accuracy>50</Accuracy>
+    </Position>
+    <Event>
+        <DisasterCategory>2</DisasterCategory>
+        <DisasterLV>2</DisasterLV>
+        <Comment>12365</Comment>
+        <HappenTime>19871010000000</HappenTime>
+    </Event>
+    <Other>
+        <Temperature>35</Temperature>
+        <Humidity>50%</Humidity>
+    </Other>
+</Message>

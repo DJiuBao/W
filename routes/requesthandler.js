@@ -164,6 +164,17 @@ exports.leaflet = function(req, res){
 	});
 };
 
+exports.xml2js = function(req, res){
+	res.render('xml2js', {
+		title: 'XML2JS',
+		user: req.session.user,
+		success: res.locals.success,
+		error: res.locals.error,
+		navbar: '',
+		layout: 'wtraveller'
+	});
+};
+
 exports.post = function(req, res){
 	var currentUser = req.session.user;
 	var post = new Post(currentUser.name,req.body.post);
